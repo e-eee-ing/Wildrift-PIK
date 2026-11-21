@@ -74,7 +74,7 @@ header p.muted{color:var(--muted)}
 </div>
 <div id="draft" class="screen">
   <div class="draft-toolbar">
-    <div class="row"><button onclick="show('modes')">← 경기 형식</button><button id="undoDraftButton" onclick="undoLastDraftSelection()" disabled>↩️ 이전 선택 되돌리기</button><button onclick="resetCurrentGame()">현재 세트 초기화</button><button onclick="resetSeries()">시리즈 초기화</button><button onclick="show('home')">홈</button></div>
+    <div class="row"><button onclick="show('modes')">← 경기 형식</button><button onclick="resetCurrentGame()">현재 세트 초기화</button><button onclick="resetSeries()">시리즈 초기화</button><button onclick="show('home')">홈</button></div>
     <div class="series-status" id="seriesStatus" aria-live="polite"></div>
   </div>
   <div class="draft-layout">
@@ -86,7 +86,7 @@ header p.muted{color:var(--muted)}
       </div>
       <div class="draft-bottom">
         <section class="champion-picker">
-          <div class="section-heading"><div><h3>챔피언 선택</h3><p class="small" id="pickerHint">현재 차례의 슬롯을 선택해 주세요.</p></div><button onclick="cancelSelection()">선택 취소</button></div>
+          <div class="section-heading"><div><h3>챔피언 선택</h3><p class="small" id="pickerHint">현재 차례의 슬롯을 선택해 주세요.</p></div><button id="undoDraftButton" onclick="undoLastDraftSelection()" disabled>↶ 이전 선택 되돌리기</button></div>
           <label class="sr-only" for="championSearch">챔피언 검색</label><input id="championSearch" class="search-input" type="search" placeholder="챔피언 이름 검색" autocomplete="off">
           <div id="championGrid" class="champion-grid"></div>
         </section>

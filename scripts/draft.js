@@ -107,11 +107,6 @@
     window.show("draft");
   };
 
-  window.cancelSelection = () => {
-    byId("championSearch").value = "";
-    render();
-  };
-
   window.undoLastDraftSelection = () => {
     const game = currentGame();
     if (!game || game.status === "completed" || game.turnIndex <= 0 || game.turnIndex > TURNS.length) return;
@@ -409,7 +404,8 @@
       `${teamLabel("blue")} (블루 진영 · 선픽)`;
     byId("winnerSelect").querySelector('[value="red"]').textContent =
       `${teamLabel("red")} (레드 진영)`;
-    byId("undoDraftButton").disabled = done || game.turnIndex <= 0;
+    byId("undoDraftButton").disabled =
+      done || game.turnIndex <= 0 || game.turnIndex > TURNS.length;
     byId("turnStatus").textContent = done
       ? "세트 결과가 저장되었습니다. 이전 기록 패널에서 상세 내용을 확인할 수 있습니다."
       : turn

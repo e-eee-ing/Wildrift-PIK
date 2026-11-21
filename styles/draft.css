@@ -42,6 +42,7 @@ body:has(#draft.active) main{max-width:1600px}
 .champion-picker h3,.result-card h3{margin:0}
 .section-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .section-heading .small{margin:4px 0 0}
+.section-heading #undoDraftButton{white-space:nowrap}
 .pick-slot-wrap{display:flex;min-width:0;flex-direction:column;gap:4px}
 .position-select{width:100%;min-width:0;padding:4px 2px;border:1px solid var(--line);border-radius:8px;background:#101a2a;color:var(--text);font:inherit;font-size:11px;text-align:center;text-align-last:center}
 .position-select:disabled{opacity:.7}
